@@ -41,6 +41,9 @@
             passwordtxt = new TextBox();
             label6 = new Label();
             phonetxt = new TextBox();
+            backbtn = new Button();
+            label7 = new Label();
+            addresstxt = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -101,14 +104,15 @@
             // 
             // signbtn
             // 
-            signbtn.BackColor = Color.LightSlateGray;
+            signbtn.BackColor = Color.SteelBlue;
             signbtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            signbtn.Location = new Point(133, 298);
+            signbtn.Location = new Point(129, 340);
             signbtn.Name = "signbtn";
             signbtn.Size = new Size(257, 41);
             signbtn.TabIndex = 6;
             signbtn.Text = "Login";
             signbtn.UseVisualStyleBackColor = false;
+            signbtn.Click += signbtn_Click;
             // 
             // nametxt
             // 
@@ -156,6 +160,35 @@
             phonetxt.Size = new Size(172, 23);
             phonetxt.TabIndex = 12;
             // 
+            // backbtn
+            // 
+            backbtn.BackColor = Color.SteelBlue;
+            backbtn.Location = new Point(531, 361);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(90, 36);
+            backbtn.TabIndex = 13;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = false;
+            backbtn.Click += backbtn_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(127, 297);
+            label7.Name = "label7";
+            label7.Size = new Size(73, 21);
+            label7.TabIndex = 14;
+            label7.Text = "Address: ";
+            // 
+            // addresstxt
+            // 
+            addresstxt.Location = new Point(218, 299);
+            addresstxt.Name = "addresstxt";
+            addresstxt.Size = new Size(172, 23);
+            addresstxt.TabIndex = 15;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -164,6 +197,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(656, 420);
+            Controls.Add(addresstxt);
+            Controls.Add(label7);
+            Controls.Add(backbtn);
             Controls.Add(phonetxt);
             Controls.Add(label6);
             Controls.Add(passwordtxt);
@@ -197,5 +233,8 @@
         private TextBox passwordtxt;
         private Label label6;
         private TextBox phonetxt;
+        private Button backbtn;
+        private Label label7;
+        private TextBox addresstxt;
     }
 }

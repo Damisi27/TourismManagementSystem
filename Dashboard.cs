@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryManagementSystem;
 
 namespace TourismManagementSystem
 {
-    public partial class UserHome : Form
+    public partial class Dashboard : Form
     {
-        public UserHome()
+        public Dashboard()
         {
             InitializeComponent();
         }
@@ -24,10 +25,28 @@ namespace TourismManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Bookings bookings = new Bookings();
+            bookings.Show();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userlogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void Hotelbtn_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
         }

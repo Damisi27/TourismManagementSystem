@@ -36,12 +36,20 @@
             label5 = new Label();
             Bookbtn = new Button();
             Backbtn = new Button();
-            toutypecomboBox = new ComboBox();
+            tourtypecmb = new ComboBox();
             countrycomboBox = new ComboBox();
             noofpeopletxt = new TextBox();
             departdateTimePicker = new DateTimePicker();
             noofdaystxt = new TextBox();
             label6 = new Label();
+            reservecmb = new ComboBox();
+            transportcmb = new ComboBox();
+            label7 = new Label();
+            label8 = new Label();
+            usercmb = new ComboBox();
+            label9 = new Label();
+            label10 = new Label();
+            tourcmb = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -49,7 +57,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(159, 111);
+            label1.Location = new Point(159, 133);
             label1.Name = "label1";
             label1.Size = new Size(79, 21);
             label1.TabIndex = 0;
@@ -60,7 +68,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(159, 163);
+            label2.Location = new Point(159, 168);
             label2.Name = "label2";
             label2.Size = new Size(69, 21);
             label2.TabIndex = 1;
@@ -71,7 +79,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(159, 207);
+            label3.Location = new Point(159, 217);
             label3.Name = "label3";
             label3.Size = new Size(90, 21);
             label3.TabIndex = 2;
@@ -103,38 +111,40 @@
             // 
             Bookbtn.BackColor = Color.SteelBlue;
             Bookbtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Bookbtn.Location = new Point(466, 359);
+            Bookbtn.Location = new Point(635, 156);
             Bookbtn.Name = "Bookbtn";
             Bookbtn.Size = new Size(96, 33);
             Bookbtn.TabIndex = 5;
             Bookbtn.Text = "Book ";
             Bookbtn.UseVisualStyleBackColor = false;
+            Bookbtn.Click += Bookbtn_Click;
             // 
             // Backbtn
             // 
             Backbtn.BackColor = Color.SteelBlue;
             Backbtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Backbtn.Location = new Point(282, 359);
+            Backbtn.Location = new Point(642, 215);
             Backbtn.Name = "Backbtn";
             Backbtn.Size = new Size(89, 33);
             Backbtn.TabIndex = 6;
             Backbtn.Text = "Back";
             Backbtn.UseVisualStyleBackColor = false;
+            Backbtn.Click += Backbtn_Click;
             // 
-            // toutypecomboBox
+            // tourtypecmb
             // 
-            toutypecomboBox.FormattingEnabled = true;
-            toutypecomboBox.Items.AddRange(new object[] { "Adventure", "Historical", "Academic", "Sight seeing", "Cruise", "Speciaty" });
-            toutypecomboBox.Location = new Point(312, 109);
-            toutypecomboBox.Name = "toutypecomboBox";
-            toutypecomboBox.Size = new Size(250, 23);
-            toutypecomboBox.TabIndex = 7;
+            tourtypecmb.FormattingEnabled = true;
+            tourtypecmb.Items.AddRange(new object[] { "Adventure", "Historical", "Educational", "Sight seeing", "Religious", "Cultural" });
+            tourtypecmb.Location = new Point(312, 135);
+            tourtypecmb.Name = "tourtypecmb";
+            tourtypecmb.Size = new Size(250, 23);
+            tourtypecmb.TabIndex = 7;
             // 
             // countrycomboBox
             // 
             countrycomboBox.FormattingEnabled = true;
             countrycomboBox.Items.AddRange(new object[] { "Greece", "United states of America", "United Kingdom", "China", "Maldlives", "Thailand", "South Korea", "Singapore", "Brasil", "Portugese", "Australia", "India", "Japan", "Indonesia", "Morocco", "Egypt", "United Emirates", "New Zealand", "Turkey", "Cyprus" });
-            countrycomboBox.Location = new Point(312, 161);
+            countrycomboBox.Location = new Point(312, 170);
             countrycomboBox.Name = "countrycomboBox";
             countrycomboBox.Size = new Size(250, 23);
             countrycomboBox.TabIndex = 8;
@@ -156,7 +166,7 @@
             // 
             // noofdaystxt
             // 
-            noofdaystxt.Location = new Point(312, 205);
+            noofdaystxt.Location = new Point(312, 215);
             noofdaystxt.Name = "noofdaystxt";
             noofdaystxt.Size = new Size(250, 23);
             noofdaystxt.TabIndex = 11;
@@ -166,11 +176,88 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe Print", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(159, 25);
+            label6.Location = new Point(34, 9);
             label6.Name = "label6";
             label6.Size = new Size(264, 43);
             label6.TabIndex = 12;
             label6.Text = "Make your Bookings";
+            // 
+            // reservecmb
+            // 
+            reservecmb.FormattingEnabled = true;
+            reservecmb.Items.AddRange(new object[] { "Greece", "United states of America", "United Kingdom", "China", "Maldlives", "Thailand", "South Korea", "Singapore", "Brasil", "Portugese", "Australia", "India", "Japan", "Indonesia", "Morocco", "Egypt", "United Emirates", "New Zealand", "Turkey", "Cyprus" });
+            reservecmb.Location = new Point(312, 339);
+            reservecmb.Name = "reservecmb";
+            reservecmb.Size = new Size(250, 23);
+            reservecmb.TabIndex = 13;
+            // 
+            // transportcmb
+            // 
+            transportcmb.FormattingEnabled = true;
+            transportcmb.Location = new Point(312, 380);
+            transportcmb.Name = "transportcmb";
+            transportcmb.Size = new Size(250, 23);
+            transportcmb.TabIndex = 14;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(159, 339);
+            label7.Name = "label7";
+            label7.Size = new Size(95, 21);
+            label7.TabIndex = 15;
+            label7.Text = "Reservation:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(159, 380);
+            label8.Name = "label8";
+            label8.Size = new Size(114, 21);
+            label8.TabIndex = 16;
+            label8.Text = "Transportation:";
+            // 
+            // usercmb
+            // 
+            usercmb.FormattingEnabled = true;
+            usercmb.Location = new Point(312, 69);
+            usercmb.Name = "usercmb";
+            usercmb.Size = new Size(250, 23);
+            usercmb.TabIndex = 17;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(159, 71);
+            label9.Name = "label9";
+            label9.Size = new Size(45, 21);
+            label9.TabIndex = 18;
+            label9.Text = "User:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(159, 100);
+            label10.Name = "label10";
+            label10.Size = new Size(60, 21);
+            label10.TabIndex = 19;
+            label10.Text = "Tour id:";
+            // 
+            // tourcmb
+            // 
+            tourcmb.FormattingEnabled = true;
+            tourcmb.Location = new Point(312, 98);
+            tourcmb.Name = "tourcmb";
+            tourcmb.Size = new Size(250, 23);
+            tourcmb.TabIndex = 20;
             // 
             // Bookings
             // 
@@ -179,12 +266,20 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(tourcmb);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(usercmb);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(transportcmb);
+            Controls.Add(reservecmb);
             Controls.Add(label6);
             Controls.Add(noofdaystxt);
             Controls.Add(departdateTimePicker);
             Controls.Add(noofpeopletxt);
             Controls.Add(countrycomboBox);
-            Controls.Add(toutypecomboBox);
+            Controls.Add(tourtypecmb);
             Controls.Add(Backbtn);
             Controls.Add(Bookbtn);
             Controls.Add(label5);
@@ -209,11 +304,19 @@
         private Label label5;
         private Button Bookbtn;
         private Button Backbtn;
-        private ComboBox toutypecomboBox;
+        private ComboBox tourtypecmb;
         private ComboBox countrycomboBox;
         private TextBox noofpeopletxt;
         private DateTimePicker departdateTimePicker;
         private TextBox noofdaystxt;
         private Label label6;
+        private ComboBox reservecmb;
+        private ComboBox transportcmb;
+        private Label label7;
+        private Label label8;
+        private ComboBox usercmb;
+        private Label label9;
+        private Label label10;
+        private ComboBox tourcmb;
     }
 }

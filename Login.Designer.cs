@@ -88,6 +88,7 @@
             Loginbtn.TabIndex = 4;
             Loginbtn.Text = "Login";
             Loginbtn.UseVisualStyleBackColor = false;
+            Loginbtn.Click += Loginbtn_Click;
             // 
             // Registerbtn
             // 
@@ -99,6 +100,7 @@
             Registerbtn.TabIndex = 5;
             Registerbtn.Text = "Sign Up";
             Registerbtn.UseVisualStyleBackColor = false;
+            Registerbtn.Click += Registerbtn_Click;
             // 
             // label2
             // 

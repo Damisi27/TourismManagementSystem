@@ -1,6 +1,6 @@
 ﻿namespace TourismManagementSystem
 {
-    partial class UserHome
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserHome));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -113,6 +113,7 @@
             userlogout.TabIndex = 3;
             userlogout.Text = "Log out ";
             userlogout.UseVisualStyleBackColor = false;
+            userlogout.Click += userlogout_Click;
             // 
             // paymentbtn
             // 
@@ -135,6 +136,7 @@
             Hotelbtn.TabIndex = 1;
             Hotelbtn.Text = "Hotels";
             Hotelbtn.UseVisualStyleBackColor = false;
+            Hotelbtn.Click += Hotelbtn_Click;
             // 
             // bookingsbtn
             // 
@@ -181,7 +183,7 @@
             label4.Size = new Size(0, 15);
             label4.TabIndex = 3;
             // 
-            // UserHome
+            // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -192,8 +194,9 @@
             Controls.Add(label3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "UserHome";
-            Text = "Form3";
+            Name = "Dashboard";
+            Text = "Dashboard";
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
