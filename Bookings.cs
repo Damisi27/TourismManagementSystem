@@ -13,6 +13,7 @@ namespace TourismManagementSystem
             InitializeComponent();
             LoadTourTypes();
             LoadTours();
+            LoadUsers();
             LoadReservations();
             LoadTransport();
         }
@@ -34,11 +35,26 @@ namespace TourismManagementSystem
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                tourtypecmb.DataSource = dt;
-                tourtypecmb.DisplayMember = "name";
-                tourtypecmb.ValueMember = "tour_id";
+                tourcmb.DataSource = dt;
+                tourcmb.DisplayMember = "name";
+                tourcmb.ValueMember = "tour_id";
             }
         }
+        private void LoadUsers()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT user_id, username FROM Users";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                usercmb.DataSource = dt;
+                usercmb.DisplayMember = "username";
+                usercmb.ValueMember = "user_id";
+            }
+        }
+
         private void LoadReservations()
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
